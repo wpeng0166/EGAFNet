@@ -1,0 +1,66 @@
+python test_alone.py
+/home/s_wp/workspace/envs/open/lib/python3.8/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/home/s_wp/workspace/envs/open/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/s_wp/workspace/envs/open/lib/python3.8/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+Random seed fixed to 3408
+------------ Options -------------
+alpha: 0.25
+arconv: False
+backbone: mobilenetv2
+batch_size: 16
+beta_mode: contextgatedconv
+checkpoint_dir: ./checkpoints
+dataroot: /home/s_wp/workspace/data/
+dataset: SYSU
+deform_groups: 4
+dropout_rate: 0.1
+fdconv: False
+fpn: fpn
+fpn_channels: 128
+gamma: 4
+gamma_mode: SE
+gpu_ids: [0]
+init_type: kaiming_normal
+input_size: 256
+kernel_layers: 1
+lge: False
+load_pretrain: False
+lr: 0.0005
+name: SYSU_edge_fenzhi_f14_re13
+num_epochs: 100
+num_heads: 1
+num_points: 8
+num_workers: 4
+phase: train
+result_dir: ./results
+test_batch_size: 1
+vis_cols: 8
+vis_dir: checkpoints/SYSU_edge_fenzhi_f14_re13/results6
+warmup_epochs: 20
+weight_decay: 0.0005
+-------------- End ----------------
+#testing images = 4000
+loading imagenet pretrained mobilenetv2
+loaded imagenet pretrained mobilenetv2
+✅ Model weights loaded from SYSU_edge_fenzhi_f14_re13_mobilenetv2_best.pth
+
+========== 🔍 Optimizer structure check ==========
+Checkpoint param group count: 1
+Current optimizer param group count: 1
+
+--- Group 0 ---
+Checkpoint group param count: 834
+Current optimizer group param count: 834
+✅ Group matches.
+==================================================
+
+✅ Optimizer state loaded successfully.
+---------- Networks initialized -------------
+model [SYSU_edge_fenzhi_f14_re13] was created
+100%|███████████████████████████████████████████████████████████| 4000/4000 [03:33<00:00, 18.77it/s]
+
+Last batch image shape: torch.Size([1, 3, 256, 256]) Filenames: ['02673.png']
+(phase: test) acc: 92.840 miou: 82.206 mf1: 89.973 iou_0: 91.085 iou_1: 73.327 F1_0: 95.335 F1_1: 84.611 precision_0: 94.940 precision_1: 85.788 recall_0: 95.733 recall_1: 83.466 
