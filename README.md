@@ -11,8 +11,8 @@ If you find this paper or code helpful, please consider giving this repository a
 
 ## News
 
-- The code and pretrained weights are released for remote sensing binary change detection.
-- Pretrained checkpoints are provided for SYSU, SECOND, and JLYHCD.
+- The code and trained model weights are released for remote sensing binary change detection.
+- Trained checkpoints are provided for SYSU, SECOND, and JLYHCD.
 
 ## Introduction
 
@@ -127,9 +127,9 @@ python trainval_edge.py \
 
 You may adjust `--input_size`, `--batch_size`, `--num_epochs`, and `--lr` according to your GPU memory and dataset setting.
 
-## Pretrained Weights
+## Trained Weights
 
-The pretrained weights are not included in this repository. Please download the `.pth` files from the links below and place them under `checkpoints/`:
+The trained model weights are not included in this repository. Please download the `.pth` files from the links below and place them under `checkpoints/`:
 
 ```text
 checkpoints/SYSU/SYSU_mobilenetv2_best.pth
